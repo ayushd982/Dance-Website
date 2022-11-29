@@ -1,0 +1,20 @@
+extends base.pug 
+
+block scripts 
+   script(src="/static/cum.js") 
+
+block style 
+   style
+      include ../static/stylee.css
+      include ../static/stylecontact.css
+
+block content 
+    h1 Contact Us
+    form(action="/contact" , method="post" , class="Form")      
+      input(type="text" , class="myInput" , name="Name" , placeholder="Enter Your Name")
+      input(type="Phone Number" , class="myInput" , name="Phone Number" , placeholder="Enter Your Phone Number")
+      input(type="Email" , class="myInput" , name="Email" , placeholder="Enter Your Email")
+      input(type="text" , class="myInput" , name="address" , placeholder="Enter Your address")
+      input(type="text" , class="myInput" , name="desc" , placeholder="Enter Your Concern")
+      button(class="btn")  
+       |submit
